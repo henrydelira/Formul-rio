@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css-formulário.css">
+</head>
+<body>
+    <section class="form">
+        <h2 class="tittleform">Agência de transporte mobiliário Mula</h2>
+        <p class="subtittleform">Chegou a hora da mudança. Venha confiar em nós para o transporte de seus bens.</p>
+        <form class="" action="">
+        <div class="input_box w70">
+            <input type="text" name="Nome" required>
+            <label>Nome</label> 
+            <span class=""></span>
+        </div>
+        <div class="input_box w30">
+            <input type="text" name="Telefone" required>
+            <label>Telefone</label> 
+            <span class=""></span></div>
+        <div class="input_box">
+            <input type="email" name="E-mail" required>
+            <label>E-mail</label> 
+            <span class=""></span></div>
+        <div class="input_box">
+            <textarea name="Mensagem" required></textarea>
+            <label>Mensagem</label> 
+            <span class=""></span></div>
+        <div class="input_box">
+            <input class="color_input" type="submit" value="Enviar">
+        </div>
+    </form>
+    </section>
+    <script>
+        let email = document.querySelector("input[type='email']")
+
+        email.onchange = () => {
+            if(email.value.length != 0){
+                email.classList.add('valid')
+            } else if(email.value.length == 0){
+                email.classList.remove('valid')
+            } 
+        }
+    </script>
+</body>
+</html>
